@@ -94,14 +94,35 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/*#pierreUser, #feuilleUser, #ciseauxUser, #ciseauxOrdi, #pierreOrdi, #feuilleOrdi
+{
+    opacity: 0.5;
+}*/
 
+body
+{
+    background-image: url(../img/fond.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+h1
+{
+    text-align: center;
+}
+.main
+{
+    display: flex;
+    justify-content: space-between; 
+}
 
-
-
-
-
-
+.ordi, .user
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
 
 

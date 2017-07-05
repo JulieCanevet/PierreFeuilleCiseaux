@@ -11,8 +11,8 @@
         <link rel="icon" href="favicon.png">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -28,131 +28,31 @@
 <h1>PIERRE - FEUILLE - CISEAUX</h1>
 <input type="text" name="name" placeholder="votre nom"/>
 
-<figure class="user">
-<img src="img/pierreUser.png"/>
-<img src="img/feuilleUser.png"/>
-<img src="img/ciseauxUser.png"/>
-</figure>
+<section class="main">
+    <figure class="images">
+        <h2>Pseudo</h2>
+        <img onclick="choix('0')" class="choice" id="userpierre" src="img/pierreUser.png" alt="Pierre"/>
+        <img onclick="choix('1')" class="choice" id="userfeuille" src="img/feuilleUser.png" alt="feuille"/>
+        <img onclick="choix('2')" class="choice" id="userciseaux" src="img/ciseauxUser.png" alt="ciseaux"/>
+    </figure>
 
 
-<figure class="ordi">
-<img src="img/pierreUser.png"/>
-<img src="img/feuilleUser.png"/>
-<img src="img/ciseauxUser.png"/>
-</figure>
+<!-- <img id="pierreUser" src="img/pierreUser.png" alt="Pierre"/>
+<img id="feuilleUser" src="img/feuilleUser.png" alt="feuille"/>
+<img id="ciseauxUser" src="img/ciseauxUser.png" alt="ciseaux"/>
+ -->
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <script type="text/javascript">
-
-// PIERRE FEUILLE CISEAUX
-var scorejoueur= 0;
-var scoreordi= 0;
-var t=["pierre", "feuille", "ciseaux"];
-
-while ((scorejoueur<3) && (scoreordi<3))
-{ 
-  var joueur = prompt ("pierre, feuille ou ciseaux ?");
-
-  var ordi = t[Math.floor(Math.random(t) * t.length)];
-
-alert(ordi);
-
-if (ordi.toLowerCase() == t[0] && joueur.toLowerCase() == t[1])
-  {
-    scorejoueur += 1;
-    alert("Vous marquez 1 point");
-  }
-
-else if (ordi.toLowerCase() == t[0] && joueur.toLowerCase() == t[2])
-  {
-    scoreordi += 1;
-    alert("Ordinateur marque 1 point");
-  }
-
-else if (ordi.toLowerCase() == t[1] && joueur.toLowerCase() == t[0])
-  {
-    scoreordi += 1;
-    alert("Ordinateur marque 1 point");
-  }
-
-else if (ordi.toLowerCase() == t[1] && joueur.toLowerCase() == t[2])
- {
-  scorejoueur += 1;
-  alert("Vous marquez 1 point");
-}
-
-else if (ordi.toLowerCase() == t[2] && joueur.toLowerCase() == t[0])
-  {
-    scorejoueur += 1;
-    alert("Vous marquez 1 point");
-  }
-
-else if (ordi.toLowerCase() == t[2] && joueur.toLowerCase() == t[1])
-  {
-    scoreordi += 1;
-    alert("Ordinateur marque 1 point");
-  }
-
-else if (ordi.toLowerCase() == joueur.toLowerCase())
-  {alert("Egalité");}
-
-
-else
-{
-  alert("Saisie incorrecte");
-}
-
-}
-if (scoreordi === 3)
-    {alert("ORDINATEUR IS THE WINNER");}
-
-if (scorejoueur === 3)
-    {alert("BRAVO VOUS AVEZ GAGNE");} 
-
+    <figure class="ordi">
+        <h2>Ordinateur</h2>
+        <img id="pierreOrdi" src="img/pierreUser.png"/>
+        <img id="feuilleOrdi" src="img/feuilleUser.png"/>
+        <img id="pierreOrdi" src="img/ciseauxUser.png"/>
+    </figure>
+</section>
 
 
 
