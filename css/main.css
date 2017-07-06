@@ -94,13 +94,13 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body
+/*body
 {
     background-image: url(../img/fond.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
 h1
 {
@@ -112,13 +112,12 @@ h1
     justify-content: space-between; 
 }
 
-.ordi, .images
+.ordi, .utilisateur
 {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-
 
 
 

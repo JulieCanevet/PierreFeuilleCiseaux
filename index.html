@@ -29,45 +29,48 @@
 <input type="text" name="name" placeholder="votre nom"/>
 
 <section class="main">
-    <figure class="images">
+    
+    <figure class="utilisateur">
         <h2>Pseudo</h2>
+        <div id="pointsJoueur">0</div>
         <img onclick="choix('0')" class="choice" id="userpierre" src="img/pierreUser.png" alt="Pierre"/>
         <img onclick="choix('1')" class="choice" id="userfeuille" src="img/feuilleUser.png" alt="feuille"/>
         <img onclick="choix('2')" class="choice" id="userciseaux" src="img/ciseauxUser.png" alt="ciseaux"/>
     </figure>
 
-
-    <article class="score">
+<!-- Choix écrit de l'utilisateur -->
+    <article class="choix">
         <h2>Votre choix</h2>
-        <p id="choicepierre" class="scoreJoueur">Pierre</p>
-        <p id="choicefeuille" class="scoreJoueur">Feuille</p>
-        <p id="choiceciseaux" class="scoreJoueur">Ciseaux</p>
+        <p style="display:none" id="choicepierre" class="scoreJoueur">Pierre</p>
+        <p style="display:none" id="choicefeuille" class="scoreJoueur">Feuille</p>
+        <p style="display:none" id="choiceciseaux" class="scoreJoueur">Ciseaux</p>
     </article>
 
-    <article class="score">
+<!-- Choix écrit de l'ordinateur -->
+    <article class="choix">
     <h2>Choix de l'ordi</h2>
-        <p id="choixpierre" class="scoreOrdi">Pierre</p>
-        <p id="choixfeuille" class="scoreOrdi">Feuille</p>
-        <p id="choixciseaux" class="scoreOrdi">Ciseaux</p>
+        <p style="display:none" id="choixpierre" class="scoreOrdi">Pierre</p>
+        <p style="display:none" id="choixfeuille" class="scoreOrdi">Feuille</p>
+        <p style="display:none" id="choixciseaux" class="scoreOrdi">Ciseaux</p>
     </article>
 
+<!-- Résultat de la manche -->
     <article class="match">
-        <p id="resultGagne" class="resultat">Vous avez gagné cette manche</p>        
-        <p id="resultPerdu" class="resultat">Vous avez perdu cette manche</p>
-        <p id="resultEgal" class="resultat">Egalité</p>        
+        <p style="display:none" id="resultGagne" class="resultat">Vous avez gagné cette manche</p>        
+        <p style="display:none" id="resultPerdu" class="resultat">Vous avez perdu cette manche</p>
+        <p style="display:none" id="resultEgal" class="resultat">Egalité</p>        
     </article>
-
 
 
 
     <figure class="ordi">
         <h2>Ordinateur</h2>
+        <div id="pointsOrdi">0</div>
         <img id="ordipierre" class="choiceOrdi" src="img/pierreUser.png" alt="Pierre"/>
         <img id="ordifeuille" class="choiceOrdi" src="img/feuilleUser.png" alt="Feuille"/>
         <img id="ordiciseaux" class="choiceOrdi" src="img/ciseauxUser.png" alt="Ciseaux"/>
     </figure>
 </section>
-
 
 
     </script>

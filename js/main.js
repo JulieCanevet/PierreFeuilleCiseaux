@@ -98,48 +98,95 @@ if (ordi == t[0] && joueur== t[1])
   {
     scorejoueur += 1;
     match("Gagne");
+    document.getElementById('pointsJoueur').innerHTML= scorejoueur;
+    document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
 
 else if (ordi == t[0] && joueur == t[2])
   {
     scoreordi += 1;
     match("Perdu");
+    document.getElementById('pointsJoueur').innerHTML= scorejoueur;
+    document.getElementById('pointsOrdi').innerHTML= scoreordi;
+
   }
 
 else if (ordi == t[1] && joueur == t[0])
   {
     scoreordi += 1;
     match("Perdu");
+    document.getElementById('pointsJoueur').innerHTML= scorejoueur;    
+    document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
 
 else if (ordi == t[1] && joueur == t[2])
  {
   scorejoueur += 1;
   match("Gagne");
+  document.getElementById('pointsJoueur').innerHTML= scorejoueur;
+  document.getElementById('pointsOrdi').innerHTML= scoreordi;
+
 }
 
 else if (ordi == t[2] && joueur == t[0])
   {
     scorejoueur += 1;
     match("Gagne");
+    document.getElementById('pointsJoueur').innerHTML= scorejoueur;
+    document.getElementById('pointsOrdi').innerHTML= scoreordi;
+
   }
 
 else if (ordi == t[2] && joueur == t[1])
   {
     scoreordi += 1;
     match("Perdu");
+    document.getElementById('pointsJoueur').innerHTML= scorejoueur;
+    document.getElementById('pointsOrdi').innerHTML= scoreordi;
+
   }
 
 else if (ordi == joueur)
   {
     match("Egal");
+    document.getElementById('pointsJoueur').innerHTML= scorejoueur;
+    document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
 
 }
 
 else if (scoreordi === 3)
-    {alert("ORDINATEUR IS THE WINNER");}
+  {
+    alert("ORDINATEUR IS THE WINNER");
+  }
 
 else if (scorejoueur === 3)
-    {alert("BRAVO VOUS AVEZ GAGNE");} 
+  {
+    alert("BRAVO VOUS AVEZ GAGNE");
+  } 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
