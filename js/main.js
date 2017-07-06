@@ -8,19 +8,40 @@ var joueur = "";
 var ordi = "";
 
 
+  //roulette
+  function roulette(){
+    var rouleroulette = setInterval(roulettes , 500);
+      
+
+        function roulettes(){
+      var toutes = document.getElementsByClassName("choiceOrdi");
+        for (var x=0; x < toutes.length; x++){
+      
+      toutes[x].style.opacity = '0.5';
+      }
+        var youpi = t[Math.floor(Math.random(t) * t.length)];
+
+        document.getElementById("ordi" + youpi).style.opacity = '1';
+
+
+    setTimeout(stoproulette,2800);
+      function stoproulette() {
+      clearInterval(rouleroulette);
+      document.getElementById("ordi" + youpi).style.opacity = '0.5';
+    }
+
+
+
+    }
+  }
 
 // lancement du choix du joueur au onclick
 function choix(pfc){
   joueur = t[pfc];
   show(joueur); //opacité choix utilisateur
-//   for(var a=0; a<9; a++){}
-//   choixOrdi(t[0]);
-//   choixOrdi(t[1]);
-//   choixOrdi(t[2]);  
-// }
+  roulette();
   choixOrdi(); //opacité choix ordinateur
   }
-
 
 
 // Opacité du choix de l'utilisateur
@@ -59,32 +80,17 @@ function voir(finDeOrdi){
 
 
 // Affichage du choix écrit de l'ordinateur
-function score(finDeChoixOrdi){
 
-  var scoreOrdinateur = document.getElementsByClassName('scoreOrdi');
-  for (var z=0; z < scoreOrdinateur.length; z++){
-    scoreOrdinateur[z].style.display = "none";
-  }
-  document.getElementById("choix" + finDeChoixOrdi).style.display = "block";
+function score(){
+  document.getElementById('choixpierre').innerHTML = ordi;
 }
+
 
 // Affichage du choix écrit de l'utilisateur
-function scoreUser(finDeChoixUser){
-  var scorePlayer = document.getElementsByClassName('scoreJoueur');
-  for (var v=0; v < scorePlayer.length; v++){
-    scorePlayer[v].style.display = "none";
-  }
-  document.getElementById("choice" + finDeChoixUser).style.display = "block";
+function scoreUser(){
+  document.getElementById('choicepierre').innerHTML = joueur;
+}
 
-}
-// Affichage du résultat si joueur gagne ou perd la manche
-function match(final){
-  var gagnePerd = document.getElementsByClassName('resultat');
-  for(var w=0; w  < gagnePerd.length; w++){
-    gagnePerd[w].style.display = "none";
-  }
-  document.getElementById("result" + final).style.display = "block";
-}
 
 // Lancement du Jeu PIerreFeuilleCiseaux
 function jeu(){
@@ -97,7 +103,7 @@ if ((scorejoueur<3) && (scoreordi<3))
 if (ordi == t[0] && joueur== t[1])
   {
     scorejoueur += 1;
-    match("Gagne");
+    document.getElementById('result').innerHTML = "Vous gagnez";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
@@ -105,7 +111,7 @@ if (ordi == t[0] && joueur== t[1])
 else if (ordi == t[0] && joueur == t[2])
   {
     scoreordi += 1;
-    match("Perdu");
+    document.getElementById('result').innerHTML = "Vous perdez";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
 
@@ -114,7 +120,7 @@ else if (ordi == t[0] && joueur == t[2])
 else if (ordi == t[1] && joueur == t[0])
   {
     scoreordi += 1;
-    match("Perdu");
+    document.getElementById('result').innerHTML = "Vous perdez";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;    
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
@@ -122,7 +128,7 @@ else if (ordi == t[1] && joueur == t[0])
 else if (ordi == t[1] && joueur == t[2])
  {
   scorejoueur += 1;
-  match("Gagne");
+  document.getElementById('result').innerHTML = "Vous gagnez";
   document.getElementById('pointsJoueur').innerHTML= scorejoueur;
   document.getElementById('pointsOrdi').innerHTML= scoreordi;
 
@@ -131,7 +137,7 @@ else if (ordi == t[1] && joueur == t[2])
 else if (ordi == t[2] && joueur == t[0])
   {
     scorejoueur += 1;
-    match("Gagne");
+    document.getElementById('result').innerHTML = "Vous gagnez";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
 
@@ -140,7 +146,7 @@ else if (ordi == t[2] && joueur == t[0])
 else if (ordi == t[2] && joueur == t[1])
   {
     scoreordi += 1;
-    match("Perdu");
+    document.getElementById('result').innerHTML = "Vous perdez";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
 
@@ -148,7 +154,7 @@ else if (ordi == t[2] && joueur == t[1])
 
 else if (ordi == joueur)
   {
-    match("Egal");
+    document.getElementById('result').innerHTML = "Egalité";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
@@ -158,6 +164,7 @@ else if (ordi == joueur)
 else if (scoreordi === 3)
   {
     alert("ORDINATEUR IS THE WINNER");
+    document.getElementById("peruke").style.display = "block";
   }
 
 else if (scorejoueur === 3)
