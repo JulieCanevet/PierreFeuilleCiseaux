@@ -94,11 +94,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/*#pierreUser, #feuilleUser, #ciseauxUser, #ciseauxOrdi, #pierreOrdi, #feuilleOrdi
-{
-    opacity: 0.5;
-}*/
-
 body
 {
     background-image: url(../img/fond.png);
@@ -117,7 +112,7 @@ h1
     justify-content: space-between; 
 }
 
-.ordi, .user
+.ordi, .images
 {
     display: flex;
     flex-direction: column;
