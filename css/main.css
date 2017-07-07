@@ -119,7 +119,12 @@ h1
     text-align: center;
 }
 
-
+.resultats
+{
+    width: 60%;
+    background-color: #FFFFFFC2;
+    text-align: center;
+}
 
 
 
