@@ -7,40 +7,12 @@ var t=["pierre", "feuille", "ciseaux"];
 var joueur = "";
 var ordi = "";
 
-
-  //roulette
-  function roulette(){
-    var rouleroulette = setInterval(roulettes , 500);
-      
-
-        function roulettes(){
-      var toutes = document.getElementsByClassName("choiceOrdi");
-        for (var x=0; x < toutes.length; x++){
-      
-      toutes[x].style.opacity = '0.5';
-      }
-        var youpi = t[Math.floor(Math.random(t) * t.length)];
-
-        document.getElementById("ordi" + youpi).style.opacity = '1';
-
-
-    setTimeout(stoproulette,2800);
-      function stoproulette() {
-      clearInterval(rouleroulette);
-      document.getElementById("ordi" + youpi).style.opacity = '0.5';
-    }
-
-
-
-    }
-  }
-
 // lancement du choix du joueur au onclick
 function choix(pfc){
   joueur = t[pfc];
   show(joueur); //opacité choix utilisateur
   roulette();
-  choixOrdi(); //opacité choix ordinateur
+  // choixOrdi(); //opacité choix ordinateur
   }
 
 
@@ -53,6 +25,33 @@ function show(finDeUser){
     }
   document.getElementById('user' + finDeUser).style.opacity = '1';
 }
+
+
+  //roulette
+  function roulette(){
+    var rouleroulette = setInterval(roulettes, 500);
+      
+
+      function roulettes(){
+        var toutes = document.getElementsByClassName("choiceOrdi");
+        for (var x=0; x < toutes.length; x++){
+          toutes[x].style.opacity = '0.5';
+        }
+        var youpi = t[Math.floor(Math.random(t) * t.length)];
+
+        document.getElementById("ordi" + youpi).style.opacity = '1';
+      }
+
+    setTimeout(stoproulette,2800);
+      function stoproulette() {
+      clearInterval(rouleroulette);
+       var toutes = document.getElementsByClassName("choiceOrdi");
+        for (var x=0; x < toutes.length; x++){
+          toutes[x].style.opacity = '0.5';
+        }
+      choixOrdi();
+    }
+  }
 
 
 
