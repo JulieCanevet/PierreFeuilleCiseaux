@@ -7,12 +7,13 @@ var t=["pierre", "feuille", "ciseaux"];
 var joueur = "";
 var ordi = "";
 
+var pseudo = prompt("Quel est votre nom ?");
+document.getElementById('pseudo').innerHTML = pseudo;
 // lancement du choix du joueur au onclick
 function choix(pfc){
   joueur = t[pfc];
   show(joueur); //opacité choix utilisateur
   roulette();
-  // choixOrdi(); //opacité choix ordinateur
   }
 
 
@@ -29,7 +30,7 @@ function show(finDeUser){
 
   //roulette
   function roulette(){
-    var rouleroulette = setInterval(roulettes, 500);
+    var rouleroulette = setInterval(roulettes, 250);
       
 
       function roulettes(){
@@ -102,7 +103,7 @@ if ((scorejoueur<3) && (scoreordi<3))
 if (ordi == t[0] && joueur== t[1])
   {
     scorejoueur += 1;
-    document.getElementById('result').innerHTML = "Vous gagnez";
+    document.getElementById('result').innerHTML = "Vous gagnez cette manche";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
@@ -110,7 +111,7 @@ if (ordi == t[0] && joueur== t[1])
 else if (ordi == t[0] && joueur == t[2])
   {
     scoreordi += 1;
-    document.getElementById('result').innerHTML = "Vous perdez";
+    document.getElementById('result').innerHTML = "Vous perdez cette manche";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
 
@@ -119,7 +120,7 @@ else if (ordi == t[0] && joueur == t[2])
 else if (ordi == t[1] && joueur == t[0])
   {
     scoreordi += 1;
-    document.getElementById('result').innerHTML = "Vous perdez";
+    document.getElementById('result').innerHTML = "Vous perdez cette manche";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;    
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
   }
@@ -127,7 +128,7 @@ else if (ordi == t[1] && joueur == t[0])
 else if (ordi == t[1] && joueur == t[2])
  {
   scorejoueur += 1;
-  document.getElementById('result').innerHTML = "Vous gagnez";
+  document.getElementById('result').innerHTML = "Vous gagnez cette manche";
   document.getElementById('pointsJoueur').innerHTML= scorejoueur;
   document.getElementById('pointsOrdi').innerHTML= scoreordi;
 
@@ -136,7 +137,7 @@ else if (ordi == t[1] && joueur == t[2])
 else if (ordi == t[2] && joueur == t[0])
   {
     scorejoueur += 1;
-    document.getElementById('result').innerHTML = "Vous gagnez";
+    document.getElementById('result').innerHTML = "Vous gagnez cette manche";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
 
@@ -145,7 +146,7 @@ else if (ordi == t[2] && joueur == t[0])
 else if (ordi == t[2] && joueur == t[1])
   {
     scoreordi += 1;
-    document.getElementById('result').innerHTML = "Vous perdez";
+    document.getElementById('result').innerHTML = "Vous perdez cette manche";
     document.getElementById('pointsJoueur').innerHTML= scorejoueur;
     document.getElementById('pointsOrdi').innerHTML= scoreordi;
 

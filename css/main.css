@@ -96,16 +96,81 @@ textarea {
    ========================================================================== */
 body
 {
-    background-image: url(../img/fond.png);
+    background-image: url(../img/eauClaire.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+
+    font-family: 'Questrial', sans-serif;
+
+}
+.pseudo 
+{
+    display: flex;
+    justify-content: center;
+}
+h2, .pseudo
+{
+
+    font-family: 'Paytone One', sans-serif;
 }
 
-h1
+
+.utilisateur, .ordi
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.resultats
+{
+    background-color: #FFFFFFAE;
+    width: 87%;
+    border: 2px solid white;
+    margin: auto;
+}
+.resultats span
+{
+    font-weight: bold;
+}
+.resultats p 
+{
+    margin-left: 1em;
+}
+
+img
+{
+    width: 28%;
+}
+
+.choixUtilisateur, .choixOrdinateur
+{
+    width: 100%;
+    display: flex;
+    padding-left: 1em;
+}
+
+.match
 {
     text-align: center;
+    margin-right: 2em;
+    padding-bottom: 2em;
 }
+
+.votreChoix
+{
+    display: flex;
+}
+
+@media only screen and (min-width: 760px) {
+
+
+img
+{
+    width: auto;
+}
+
 .main
 {
     display: flex;
@@ -122,11 +187,12 @@ h1
 .resultats
 {
     width: 60%;
-    background-color: #FFFFFFC2;
+    background-color: #FFFFFFAE;
     text-align: center;
+    height: 60%;
 }
 
-
+}
 
 
 

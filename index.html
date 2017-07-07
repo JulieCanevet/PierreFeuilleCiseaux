@@ -8,9 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="icon" href="favicon.png">
-
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Paytone+One|Questrial" rel="stylesheet">
+         <link rel="stylesheet" href="css/normalize.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -25,47 +25,46 @@
 
         <!-- Add your site or application content here -->
  
-<h1>PIERRE - FEUILLE - CISEAUX</h1>
-<input type="text" name="name" placeholder="votre nom"/>
+<!-- <h1>PIERRE - FEUILLE - CISEAUX</h1>
+ --><!-- <input type="text" name="name" placeholder="votre nom"/> -->
 
 <section class="main">
     
+    <div class="pseudo">
+        <h2><span id="pseudo"></span> : <span id="pointsJoueur">0</span></h2>
+    </div>
     <figure class="utilisateur">
-        <h2>Pseudo</h2>
-        <div id="pointsJoueur">0</div>
         <img onclick="choix('0')" class="choice" id="userpierre" src="img/pierreUser.png" alt="Pierre"/>
         <img onclick="choix('1')" class="choice" id="userfeuille" src="img/feuilleUser.png" alt="feuille"/>
         <img onclick="choix('2')" class="choice" id="userciseaux" src="img/ciseauxUser.png" alt="ciseaux"/>
     </figure>
 
-<section class="resultats">
-<!-- Choix écrit de l'utilisateur -->
-    <article class="choix">
-        <h2>Votre choix</h2>
-        <p id="choicepierre" class="scoreJoueur"></p>
+    <section class="resultats">
+    <article class="votreChoix">
 
-    </article>
+<!-- Choix écrit de l'utilisateur -->
+        <article class="choixUtilisateur">
+            <p>Vous : <span id="choicepierre" class="scoreJoueur"></span></p>
+        </article>
 
 <!-- Choix écrit de l'ordinateur -->
-    <article class="choix">
-    <h2>Choix de l'ordi</h2>
-        <p id="choixpierre" class="scoreOrdi"></p>
-
+        <article class="choixOrdinateur">
+            <p>Ordi : <span id="choixpierre" class="scoreOrdi"></span></p>
+        </article>
     </article>
 
 <!-- Résultat de la manche -->
-    <article class="match">
-        <p id="result" class="resultat"></p>        
+        <article class="match">
+            <p id="result" class="resultat"></p>        
+            <img style="display:none" id="peruke" src="img/peruke.gif"/>
+        </article>
 
+    </section>
 
-        <img style="display:none" id="peruke" src="img/peruke.gif"/>
-    </article>
-
-</section>
-
+       <h2>Ordinateur : <span id="pointsOrdi">0</span>
+</h2>
+        
     <figure class="ordi">
-        <h2>Ordinateur</h2>
-        <div id="pointsOrdi">0</div>
         <img id="ordipierre" class="choiceOrdi" src="img/pierreUser.png" alt="Pierre"/>
         <img id="ordifeuille" class="choiceOrdi" src="img/feuilleUser.png" alt="Feuille"/>
         <img id="ordiciseaux" class="choiceOrdi" src="img/ciseauxUser.png" alt="Ciseaux"/>
