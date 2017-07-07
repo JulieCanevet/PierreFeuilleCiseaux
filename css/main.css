@@ -101,15 +101,20 @@ body
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-
     font-family: 'Questrial', sans-serif;
-
 }
-.pseudo 
+
+.votreChoix, .utilisateur, .ordi, .choixUtilisateur, .choixOrdinateur, .pseudo 
+
 {
     display: flex;
+}
+
+.pseudo 
+{
     justify-content: center;
 }
+
 h2, .pseudo
 {
 
@@ -119,7 +124,6 @@ h2, .pseudo
 
 .utilisateur, .ordi
 {
-    display: flex;
     justify-content: space-around;
 }
 
@@ -147,7 +151,6 @@ img
 .choixUtilisateur, .choixOrdinateur
 {
     width: 100%;
-    display: flex;
     padding-left: 1em;
 }
 
@@ -158,13 +161,21 @@ img
     padding-bottom: 2em;
 }
 
-.votreChoix
+.tablette
 {
-    display: flex;
+    display: none;
 }
 
 @media only screen and (min-width: 760px) {
 
+.tablette
+{
+    display: flex;
+}
+.mobile
+{
+    display: none;
+}
 
 img
 {
@@ -189,9 +200,14 @@ img
     width: 60%;
     background-color: #FFFFFFAE;
     text-align: center;
-    height: 60%;
+    height: 300px;
 }
 
+.responsive
+{
+    display: flex;
+    flex-direction: column;
+}
 }
 
 

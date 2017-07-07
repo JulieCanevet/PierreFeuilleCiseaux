@@ -29,7 +29,7 @@
  --><!-- <input type="text" name="name" placeholder="votre nom"/> -->
 
 <section class="main">
-    
+    <div class="responsive">
     <div class="pseudo">
         <h2><span id="pseudo"></span> : <span id="pointsJoueur">0</span></h2>
     </div>
@@ -38,9 +38,9 @@
         <img onclick="choix('1')" class="choice" id="userfeuille" src="img/feuilleUser.png" alt="feuille"/>
         <img onclick="choix('2')" class="choice" id="userciseaux" src="img/ciseauxUser.png" alt="ciseaux"/>
     </figure>
-
+</div>
     <section class="resultats">
-    <article class="votreChoix">
+      <article class="votreChoix">
 
 <!-- Choix écrit de l'utilisateur -->
         <article class="choixUtilisateur">
@@ -51,7 +51,7 @@
         <article class="choixOrdinateur">
             <p>Ordi : <span id="choixpierre" class="scoreOrdi"></span></p>
         </article>
-    </article>
+      </article>
 
 <!-- Résultat de la manche -->
         <article class="match">
@@ -61,14 +61,15 @@
 
     </section>
 
-       <h2>Ordinateur : <span id="pointsOrdi">0</span>
-</h2>
+<div class="responsive">
+       <h2>Adversaire : <span id="pointsOrdi">0</span></h2>
         
     <figure class="ordi">
         <img id="ordipierre" class="choiceOrdi" src="img/pierreUser.png" alt="Pierre"/>
         <img id="ordifeuille" class="choiceOrdi" src="img/feuilleUser.png" alt="Feuille"/>
         <img id="ordiciseaux" class="choiceOrdi" src="img/ciseauxUser.png" alt="Ciseaux"/>
     </figure>
+</div>
 </section>
 
 

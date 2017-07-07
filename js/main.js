@@ -9,6 +9,7 @@ var ordi = "";
 
 var pseudo = prompt("Quel est votre nom ?");
 document.getElementById('pseudo').innerHTML = pseudo;
+alert("Cliquez sur l'image correspondante à votre choix");
 // lancement du choix du joueur au onclick
 function choix(pfc){
   joueur = t[pfc];
@@ -30,7 +31,7 @@ function show(finDeUser){
 
   //roulette
   function roulette(){
-    var rouleroulette = setInterval(roulettes, 250);
+    var rouleroulette = setInterval(roulettes, 200);
       
 
       function roulettes(){
