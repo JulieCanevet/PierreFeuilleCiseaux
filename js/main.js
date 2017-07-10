@@ -171,13 +171,28 @@ else if (scoreordi === 3)
 else if (scorejoueur === 3)
   {
     alert("BRAVO VOUS AVEZ GAGNE");
+    myMove();
   } 
 }
 
 
 
 
-
+// Lacher de ballons
+function myMove (){
+  var elem = document.getElementById('ballons');
+  var position = 0;
+  var id = setInterval(frame, 5);
+  function frame () {
+    if (position == 400){
+      clearInterval(id);
+    } else {
+      position --;
+      elem.style.top = position + 'px';
+      elem.style.left = position + 'px';
+    }
+  }
+}
 
 
 

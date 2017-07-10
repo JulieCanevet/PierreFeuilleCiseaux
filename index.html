@@ -33,11 +33,17 @@
     <div class="pseudo">
         <h2><span id="pseudo"></span> : <span id="pointsJoueur">0</span></h2>
     </div>
-    <figure class="utilisateur">
+    <article class="utilisateur">
+        <figure>
         <img onclick="choix('0')" class="choice" id="userpierre" src="img/pierreUser.png" alt="Pierre"/>
+</figure>
+<figure>
         <img onclick="choix('1')" class="choice" id="userfeuille" src="img/feuilleUser.png" alt="feuille"/>
+</figure>
+<figure>
         <img onclick="choix('2')" class="choice" id="userciseaux" src="img/ciseauxUser.png" alt="ciseaux"/>
     </figure>
+</article>
 </div>
     <section class="resultats">
       <article class="votreChoix">
@@ -64,12 +70,22 @@
 <div class="responsive">
        <h2>Adversaire : <span id="pointsOrdi">0</span></h2>
         
-    <figure class="ordi">
+    <article class="ordi">
+    <figure>
         <img id="ordipierre" class="choiceOrdi" src="img/pierreUser.png" alt="Pierre"/>
+        </figure>
+<figure>
         <img id="ordifeuille" class="choiceOrdi" src="img/feuilleUser.png" alt="Feuille"/>
+        </figure>
+        <figure>
         <img id="ordiciseaux" class="choiceOrdi" src="img/ciseauxUser.png" alt="Ciseaux"/>
     </figure>
+    </article>
 </div>
+
+<!--      <article id="victoire">
+        <img id="ballons" src="img/ballons.gif" alt="lache de ballons">
+    </article> -->
 </section>
 
 
