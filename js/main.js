@@ -164,8 +164,8 @@ else if (ordi == joueur)
 
 else if (scoreordi === 3)
   {
+    document.getElementById("spirale").style.display = "block";
     alert("ORDINATEUR IS THE WINNER");
-    // document.getElementById("peruke").style.display = "block";
   }
 
 else if (scorejoueur === 3)

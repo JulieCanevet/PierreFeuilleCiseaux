@@ -29,65 +29,59 @@
  --><!-- <input type="text" name="name" placeholder="votre nom"/> -->
 
 <section class="main">
-            <img style="display:none" id="paillettes" src="img/giphy.gif"/>
+    <img style="display:none" id="paillettes" src="img/giphy.gif"/>
+    <img style="display:none" src="img/spirale.gif" alt="perdu" id="spirale">
 
     <div class="responsive">
-    <div class="pseudo">
-        <h2><span id="pseudo"></span> : <span id="pointsJoueur">0</span></h2>
-    </div>
-    <article class="utilisateur">
-        <figure>
-        <img onclick="choix('0')" class="choice" id="userpierre" src="img/pierreUser.png" alt="Pierre"/>
-</figure>
-<figure>
-        <img onclick="choix('1')" class="choice" id="userfeuille" src="img/feuilleUser.png" alt="feuille"/>
-</figure>
-<figure>
-        <img onclick="choix('2')" class="choice" id="userciseaux" src="img/ciseauxUser.png" alt="ciseaux"/>
-    </figure>
-</article>
-</div>
-    <section class="resultats">
-      <article class="votreChoix">
-
-<!-- Choix écrit de l'utilisateur -->
-        <article class="choixUtilisateur">
-            <p>Vous : <br><span id="choicepierre" class="scoreJoueur"></span></p>
+        <div class="pseudo">
+            <h2><span id="pseudo"></span> : <span id="pointsJoueur">0</span></h2>
+        </div>
+        <article class="utilisateur">
+            <figure>
+                <img onclick="choix('0')" class="choice" id="userpierre" src="img/pierreUser.png" alt="Pierre"/>
+            </figure>
+            <figure>
+                <img onclick="choix('1')" class="choice" id="userfeuille" src="img/feuilleUser.png" alt="feuille"/>
+            </figure>
+            <figure>
+                <img onclick="choix('2')" class="choice" id="userciseaux" src="img/ciseauxUser.png" alt="ciseaux"/>
+            </figure>
         </article>
+    </div>
+    
+    <section class="resultats">
+        <article class="votreChoix">
+<!-- Choix écrit de l'utilisateur -->
+            <article class="choixUtilisateur">
+                <p>Vous : <br><span id="choicepierre" class="scoreJoueur"></span></p>
+            </article>
 
 <!-- Choix écrit de l'ordinateur -->
-        <article class="choixOrdinateur">
-            <p>Ordi : <br><span id="choixpierre" class="scoreOrdi"></span></p>
+            <article class="choixOrdinateur">
+                <p>Ordi : <br><span id="choixpierre" class="scoreOrdi"></span></p>
+            </article>
         </article>
-      </article>
 
 <!-- Résultat de la manche -->
         <article class="match">
-            <p id="result" class="resultat"></p>        
-<!--             <img style="display:none" id="peruke" src="img/peruke.gif"/>
- --> <img style="display:none" id="paillettes" src="img/giphy.gif"/>       </article>
-
+            <p id="result" class="resultat"></p>
+        </article>
     </section>
 
-<div class="responsive">
-       <h2>Adversaire : <span id="pointsOrdi">0</span></h2>
-        
-    <article class="ordi">
-    <figure>
-        <img id="ordipierre" class="choiceOrdi" src="img/pierreUser.png" alt="Pierre"/>
-        </figure>
-<figure>
-        <img id="ordifeuille" class="choiceOrdi" src="img/feuilleUser.png" alt="Feuille"/>
-        </figure>
-        <figure>
-        <img id="ordiciseaux" class="choiceOrdi" src="img/ciseauxUser.png" alt="Ciseaux"/>
-    </figure>
-    </article>
-</div>
-
-<!--      <article id="victoire">
-        <img id="ballons" src="img/ballons.gif" alt="lache de ballons">
-    </article> -->
+    <div class="responsive">
+        <h2>Adversaire : <span id="pointsOrdi">0</span></h2>    
+        <article class="ordi">
+            <figure>
+                <img id="ordipierre" class="choiceOrdi" src="img/pierreUser.png" alt="Pierre"/>
+            </figure>
+            <figure>
+                <img id="ordifeuille" class="choiceOrdi" src="img/feuilleUser.png" alt="Feuille"/>
+            </figure>
+            <figure>
+                <img id="ordiciseaux" class="choiceOrdi" src="img/ciseauxUser.png" alt="Ciseaux"/>
+            </figure>
+        </article>
+    </div>
 </section>
 
 
