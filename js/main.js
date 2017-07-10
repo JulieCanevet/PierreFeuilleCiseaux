@@ -165,13 +165,13 @@ else if (ordi == joueur)
 else if (scoreordi === 3)
   {
     alert("ORDINATEUR IS THE WINNER");
-    document.getElementById("peruke").style.display = "block";
+    // document.getElementById("peruke").style.display = "block";
   }
 
 else if (scorejoueur === 3)
   {
+    document.getElementById("paillettes").style.display = "block";
     alert("BRAVO VOUS AVEZ GAGNE");
-    myMove();
   } 
 }
 
@@ -179,20 +179,20 @@ else if (scorejoueur === 3)
 
 
 // Lacher de ballons
-function myMove (){
-  var elem = document.getElementById('ballons');
-  var position = 0;
-  var id = setInterval(frame, 5);
-  function frame () {
-    if (position == 400){
-      clearInterval(id);
-    } else {
-      position --;
-      elem.style.top = position + 'px';
-      elem.style.left = position + 'px';
-    }
-  }
-}
+// function myMove (){
+//   var elem = document.getElementById('ballons');
+//   var position = 0;
+//   var id = setInterval(frame, 5);
+//   function frame () {
+//     if (position == 400){
+//       clearInterval(id);
+//     } else {
+//       position --;
+//       elem.style.top = position + 'px';
+//       elem.style.left = position + 'px';
+//     }
+//   }
+// }
 
 
 
