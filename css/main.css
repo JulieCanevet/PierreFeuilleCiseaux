@@ -96,7 +96,7 @@ textarea {
    ========================================================================== */
 body
 {
-    background-color: #D7493F;
+    background-color: #B7C6F3;
     font-family: 'Questrial', sans-serif;
     letter-spacing: 2px;
     color: white;
@@ -114,7 +114,7 @@ body
 
 h2, .pseudo
 {
-    color: #B63730;
+    color: #98A7D4;
 }
 
  /* Articles conteneurs des images*/
@@ -136,7 +136,7 @@ h2, .pseudo
 
 .resultats
 {
-    background-color: #B63730;
+    background-color: #98A7D4;
     width: 87%;
     margin: auto;
 }
